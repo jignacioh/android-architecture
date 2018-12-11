@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun respondToClicks() {
-        main_activity_button.setOnClickListener({
+        main_activity_button.setOnClickListener {
             showProgressBar()
             mMainViewModel.findAddress(main_activity_editText.text.toString())
-        })
+        }
         mAddressAdapter setItemClickMethod {
             mMainViewModel.doOnItemClick(it)
         }
